@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "587454788717",
+    "project_id": "digitalcash-e0a90",
+    "storage_bucket": "digitalcash-e0a90.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:587454788717:android:fde486ef71f270216d7b64",
+        "android_client_info": {
+          "package_name": "com.siaaw.digital_cash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "587454788717-8d7r0pi90h2qe90uc3mo10hpo2r3rqrt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.siaaw.digital_cash",
+            "certificate_hash": "d40f19bdafb205c8faf760896e93719582970485"
+          }
+        },
+        {
+          "client_id": "587454788717-an1sl957cgu8plh8a3a7ig2vku8asemj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCV2OJtzhIfyky7ZQE6da0cvf-JxKz9dqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "587454788717-an1sl957cgu8plh8a3a7ig2vku8asemj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

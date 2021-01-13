@@ -1,0 +1,64 @@
+name: digital_cash
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.0
+  flutter_icons: ^1.1.0
+  bottom_navy_bar: ^5.6.0
+  firebase_auth: ^0.18.4+1
+  firebase_core: ^0.5.3
+  pinput: ^0.2.6
+  http: ^0.12.2
+  shared_preferences: ^0.5.12+4
+  razorpay_flutter: ^1.2.3
+  lottie: ^0.7.0+1
+  url_launcher: ^5.7.10
+  flutter_share: ^1.0.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/logo.png
+    - assets/images/splash-bg.png
+    - assets/images/signup-bg.png
+    - assets/images/user.png
+    - assets/confirm.json
+    - assets/icons/bank.png
+    - assets/icons/data-transfer.png
+    - assets/icons/digital-wallet.png
+    - assets/icons/happy.png
+    - assets/icons/home.png
+    - assets/icons/man.png
+    - assets/icons/settings.png
+    - assets/icons/transfer.png
+    - assets/icons/wallet.png
+    - assets/icons/walletwelcome.png
+    - assets/icons/wallet-transfer.png
+
+  fonts:
+    - family: RacingSansOne
+      fonts:
+        - asset: assets/fonts/RacingSansOne-Regular.ttf
+
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+
+    - family: Changa
+      fonts:
+        - asset: assets/fonts/Changa-Regular.ttf
