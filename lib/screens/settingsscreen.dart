@@ -64,7 +64,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             icon: FontAwesome5Solid.history,
             onPressed: () {
               _launchURL(
-                  'https://play.google.com/store/apps/details?id=com.siaaw.wallpaper_plus');
+                  'https://play.google.com/store/apps/details?id=com.zestwallet.app');
             },
           ),
           SettingsItems(
@@ -75,7 +75,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 title: 'Check out this cool app',
                 text: ' Transfer zest wallet balance to your bank account',
                 linkUrl:
-                    'https://play.google.com/store/apps/details?id=com.siaaw.wallpaper_plus',
+                    'https://play.google.com/store/apps/details?id=com.zestwallet.app',
               );
             },
           ),
@@ -84,7 +84,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             icon: FontAwesome5Solid.star,
             onPressed: () {
               _launchURL(
-                  'https://play.google.com/store/apps/details?id=com.siaaw.wallpaper_plus');
+                  'https://play.google.com/store/apps/details?id=com.zestwallet.app');
             },
           ),
           SettingsItems(

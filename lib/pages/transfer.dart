@@ -68,7 +68,7 @@ class _TransferState extends State<Transfer> {
       Map<String, dynamic> jsonData = jsonDecode(response.body);
 
       accountModel = AccountModel.fromMap(jsonData['result']);
-      print(jsonData.toString());
+      // print(jsonData.toString());
       setState(() {});
       if (jsonData['success'] == '1') {
         hasAccount = true;
@@ -100,7 +100,7 @@ class _TransferState extends State<Transfer> {
     var headers = {
       'Content-type': 'application/json',
       'Authorization':
-          'Basic cnpwX3Rlc3RfemJYeXdlYXVlWUM2OHE6TzdRTFg3dENmM05jVnRKQ0pvOWk4OEVy'
+          'Basic cnpwX2xpdmVfSjMwaXlSSVRMMkR3Yk86NXVjemZEaTZNUk5GNDBrdEhWd01zWjhG'
     };
     var request =
         http.Request('POST', Uri.parse('https://api.razorpay.com/v1/orders'));
@@ -116,13 +116,15 @@ class _TransferState extends State<Transfer> {
       if (ordersModel.id != null) {
         openCheckOut();
       }
+    } else {
+      print(response.statusCode);
     }
   }
 
   openCheckOut() async {
     if (ordersModel.id != null) {
       var options = {
-        'key': 'rzp_test_zbXyweaueYC68q',
+        'key': 'rzp_live_J30iyRITL2DwbO',
         'amount': finalAmount,
         'name': 'Digital Cash',
         'order_id': ordersModel.id.toString(),
