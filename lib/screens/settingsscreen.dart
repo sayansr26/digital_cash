@@ -91,7 +91,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             title: 'Call us',
             icon: FontAwesome5Solid.phone,
             onPressed: () {
-              int phone = 916289572156;
+              int phone = 917024394944;
               _launchURL('tel://$phone');
             },
           ),

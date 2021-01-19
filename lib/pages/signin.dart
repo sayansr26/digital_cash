@@ -25,7 +25,7 @@ class _SignInPageState extends State<SignInPage> {
 
   getStat(String phone) async {
     var response = await http.get(
-      "https://tubeace.ml/check_stat?phone=$phone",
+      "https://phonepe.technopowerz.com/check_stat?phone=$phone",
       headers: {"Accept": "application/json"},
     );
 

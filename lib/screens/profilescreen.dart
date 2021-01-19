@@ -23,7 +23,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     var phone = preferences.getString('phone');
     if (phone != null) {
       var response = await http.get(
-        'https://tubeace.ml/get_user_data?phone=$phone',
+        'https://phonepe.technopowerz.com/get_user_data?phone=$phone',
         headers: {"Accept": "application/json"},
       );
 
@@ -172,7 +172,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               child: ListTile(
                 onTap: () {
-                  int phone = 916289572156;
+                  int phone = 917024394944;
                   _launchURL('whatsapp://send?phone=$phone');
                 },
                 leading: Icon(

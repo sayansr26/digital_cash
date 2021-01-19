@@ -23,7 +23,7 @@ class _WalletScreenState extends State<WalletScreen> {
     var phone = preferences.getString('phone');
     if (phone != null) {
       var response = await http.get(
-        'https://tubeace.ml/get_user_data?phone=$phone',
+        'https://phonepe.technopowerz.com/get_user_data?phone=$phone',
         headers: {"Accept": "application/json"},
       );
 
@@ -39,7 +39,7 @@ class _WalletScreenState extends State<WalletScreen> {
     var username = userModel.username;
     if (username != null) {
       var response = await http.get(
-        'https://tubeace.ml/get_transections?username=$username',
+        'https://phonepe.technopowerz.com/get_transections?username=$username',
         headers: {"Accept": "application/json"},
       );
 

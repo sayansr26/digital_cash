@@ -5,7 +5,6 @@ import 'package:digital_cash/models/usermodel.dart';
 import 'package:digital_cash/pages/transections.dart';
 import 'package:digital_cash/pages/transfer.dart';
 import 'package:digital_cash/screens/historyscreen.dart';
-import 'package:digital_cash/screens/walletscreen.dart';
 import 'package:digital_cash/widgets/transectionitems.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
@@ -25,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
     var phone = preferences.getString('phone');
     if (phone != null) {
       var response = await http.get(
-        'https://tubeace.ml/get_user_data?phone=$phone',
+        'https://phonepe.technopowerz.com/get_user_data?phone=$phone',
         headers: {"Accept": "application/json"},
       );
 
@@ -41,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
     var username = userModel.username;
     if (username != null) {
       var response = await http.get(
-        'https://tubeace.ml/get_transections?username=$username',
+        'https://phonepe.technopowerz.com/get_transections?username=$username',
         headers: {"Accept": "application/json"},
       );
 
@@ -132,31 +131,81 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: 10),
             Center(
               child: Container(
-                height: 80,
-                width: MediaQuery.of(context).size.width / 1.4,
+                // height: 80,
+                width: MediaQuery.of(context).size.width / 1.1,
                 padding: EdgeInsets.symmetric(
                   horizontal: 20,
                   vertical: 10,
                 ),
+                transform: Matrix4.translationValues(0, -23.5, 0),
                 decoration: BoxDecoration(
                   color: Color(0xffa3d593),
-                  borderRadius: BorderRadius.circular(25),
+                  borderRadius: BorderRadius.circular(15),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey.withOpacity(0.2),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3),
+                      spreadRadius: 7,
+                      blurRadius: 9,
+                      offset: Offset(0, 4),
                     ),
                   ],
                 ),
-                child: Row(
+                child: Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    InkWell(
-                      onTap: () {
+                    SizedBox(height: 10),
+                    Text(
+                      'Zest Money To Bank Transfer Instantly',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Color(0xff707070),
+                        fontWeight: FontWeight.w700,
+                        fontSize: 22,
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.symmetric(
+                        horizontal: 10,
+                        vertical: 10,
+                      ),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 10,
+                        vertical: 10,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Color(0xfff0f0f0),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Zestmone To BankTransfer',
+                            style: TextStyle(
+                              color: Color(0xff707070),
+                              fontWeight: FontWeight.w700,
+                              fontSize: 16,
+                            ),
+                          ),
+                          Icon(
+                            Icons.arrow_drop_down,
+                            color: Color(0xff707070),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    MaterialButton(
+                      color: Color(0xffff7a7a),
+                      disabledColor: Color(0xffff7a7a),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -165,64 +214,34 @@ class _HomeScreenState extends State<HomeScreen> {
                         );
                       },
                       child: Container(
-                        margin: EdgeInsets.only(right: 20),
-                        height: 50,
-                        width: 50,
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
+                        padding: EdgeInsets.symmetric(vertical: 5),
+                        width: MediaQuery.of(context).size.width / 2.2,
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Transfer',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w700,
+                                fontSize: 22,
+                              ),
+                            ),
+                            Icon(
+                              MaterialCommunityIcons.bank_transfer,
+                              color: Colors.white,
+                              size: 30,
+                            ),
+                          ],
                         ),
-                        child: Icon(Feather.send),
                       ),
                     ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => WalletScreen(),
-                          ),
-                        );
-                      },
-                      child: Container(
-                        margin: EdgeInsets.only(right: 20),
-                        height: 50,
-                        width: 50,
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Icon(FlutterIcons.wallet_plus_mco),
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => HistoryScreen(),
-                          ),
-                        );
-                      },
-                      child: Container(
-                        height: 50,
-                        width: 50,
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Icon(FlutterIcons.bank_transfer_mco),
-                      ),
-                    ),
+                    SizedBox(height: 10),
                   ],
                 ),
               ),
-            ),
-            SizedBox(
-              height: 30,
             ),
             Row(
               mainAxisSize: MainAxisSize.max,

@@ -46,7 +46,7 @@ class _OtpScreenState extends State<OtpScreen> {
 
     if (type == '1') {
       var response = await http.get(
-        'https://tubeace.ml/register_user?fname=$fname&lname=$lname&email=$email&username=$username&phone=$phone',
+        'https://phonepe.technopowerz.com/register_user?fname=$fname&lname=$lname&email=$email&username=$username&phone=$phone',
         headers: {"Accept": "application/json"},
       );
 
@@ -59,7 +59,7 @@ class _OtpScreenState extends State<OtpScreen> {
       // print(jsonData);
     } else {
       var response = await http.get(
-        'https://tubeace.ml/login_user?phone=$phone',
+        'https://phonepe.technopowerz.com/login_user?phone=$phone',
         headers: {"Accept": "application/json"},
       );
 

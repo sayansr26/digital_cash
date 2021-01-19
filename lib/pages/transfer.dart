@@ -46,7 +46,7 @@ class _TransferState extends State<Transfer> {
 
   getCharges() async {
     var response = await http.get(
-      'https://tubeace.ml/get_exchnage_rate',
+      'https://phonepe.technopowerz.com/get_exchnage_rate',
       headers: {"Accept": "application/json"},
     );
 
@@ -61,7 +61,7 @@ class _TransferState extends State<Transfer> {
     var phone = preferences.getString('phone');
     if (phone != null) {
       var response = await http.get(
-        'https://tubeace.ml/account_details?phone=$phone',
+        'https://phonepe.technopowerz.com/account_details?phone=$phone',
         headers: {"Accept": "application/json"},
       );
 
@@ -85,7 +85,7 @@ class _TransferState extends State<Transfer> {
     var phone = preferences.getString('phone');
     if (phone != null) {
       var response = await http.get(
-        'https://tubeace.ml/get_user_data?phone=$phone',
+        'https://phonepe.technopowerz.com/get_user_data?phone=$phone',
         headers: {"Accept": "application/json"},
       );
 
@@ -128,7 +128,7 @@ class _TransferState extends State<Transfer> {
         'amount': finalAmount,
         'name': 'Digital Cash',
         'order_id': ordersModel.id.toString(),
-        'description': 'Trasfer money',
+        'description': 'Transfer money',
         'timeout': 60,
         'image': 'https://avatars1.githubusercontent.com/u/35045612?s=400&v=4',
         'prefill': {'contact': userModel.phone, 'email': userModel.email},
@@ -156,8 +156,8 @@ class _TransferState extends State<Transfer> {
       var phone = userModel.phone;
 
       var response = await http.get(
-        'https://tubeace.ml/create_account?phone=$phone&banificary=$banificaryName&account=$accountNumber&ifsc=$ifscCode&bank_name=$bankName',
-        headers: {'Accept': 'appliaction/json'},
+        'https://phonepe.technopowerz.com/create_account?phone=$phone&banificary=$banificaryName&account=$accountNumber&ifsc=$ifscCode&bank_name=$bankName',
+        headers: {'Accept': 'application/json'},
       );
 
       Map<String, dynamic> jsonData = jsonDecode(response.body);
@@ -220,7 +220,7 @@ class _TransferState extends State<Transfer> {
     var type = '1';
 
     var request = await http.get(
-      'https://tubeace.ml/create_transection?amount=$amount&charge=$charge&total=$total&username=$username&phone=$phone&ban=$ban&account=$account&ifsc=$ifsc&bank=$bank&razorpay=$razorpay&order_id=$orderId&type=$type',
+      'https://phonepe.technopowerz.com/create_transection?amount=$amount&charge=$charge&total=$total&username=$username&phone=$phone&ban=$ban&account=$account&ifsc=$ifsc&bank=$bank&razorpay=$razorpay&order_id=$orderId&type=$type',
       headers: {"Accept": "application/json"},
     );
 
@@ -246,7 +246,7 @@ class _TransferState extends State<Transfer> {
   }
 
   void handlePaymentError(PaymentFailureResponse response) {
-    showSnackbar('Sorry payment faield');
+    showSnackbar('Sorry payment field');
   }
 
   void handleExternalWallet() {
@@ -476,7 +476,7 @@ class _TransferState extends State<Transfer> {
                       buttonText: 'Transfer Money',
                       onPressed: () {
                         if (amountController.text == '') {
-                          showSnackbar('Transection Amount Required !');
+                          showSnackbar('Transaction Amount Required !');
                         } else {
                           createOrder();
                         }
@@ -488,12 +488,12 @@ class _TransferState extends State<Transfer> {
                         if (aBanificaryController.text == '') {
                           showSnackbar('Banificary Name required !');
                         } else if (aAccountController.text == '') {
-                          showSnackbar('Accunt Number required !');
+                          showSnackbar('Account Number required !');
                         } else if (aCaccountController.text == '') {
-                          showSnackbar('Confirm Accunt Number required !');
+                          showSnackbar('Confirm Account Number required !');
                         } else if (aCaccountController.text !=
                             aAccountController.text) {
-                          showSnackbar('Accunt Number mismatch !');
+                          showSnackbar('Account Number mismatch !');
                         } else if (aIfscController.text == '') {
                           showSnackbar('ISC Code required !');
                         } else if (aBankController.text == '') {
