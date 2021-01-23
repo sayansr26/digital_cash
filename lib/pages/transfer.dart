@@ -11,6 +11,7 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:http/http.dart' as http;
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 import 'thankyou.dart';
 
@@ -38,6 +39,8 @@ class _TransferState extends State<Transfer> {
   double chargeAmount, chargeFinal, totalAmount, finalAmount;
 
   bool hasAccount = false;
+
+  bool loaderScreen = false;
 
   ChargesModel chargesModel = new ChargesModel();
   OrdersModel ordersModel = new OrdersModel();
@@ -129,7 +132,7 @@ class _TransferState extends State<Transfer> {
         'name': 'Digital Cash',
         'order_id': ordersModel.id.toString(),
         'description': 'Transfer money',
-        'timeout': 60,
+        'timeout': 300,
         'image': 'https://avatars1.githubusercontent.com/u/35045612?s=400&v=4',
         'prefill': {'contact': userModel.phone, 'email': userModel.email},
         'external': {
@@ -205,6 +208,7 @@ class _TransferState extends State<Transfer> {
   }
 
   void handlePaymentSuccess(PaymentSuccessResponse response) async {
+    loaderScreen = true;
     // showSnackbar(response.orderId);
     var amount = amountController.text;
     var charge = chargeFinal;
@@ -266,6 +270,20 @@ class _TransferState extends State<Transfer> {
 
   @override
   Widget build(BuildContext context) {
+    return loaderScreen ? _spinner() : _content();
+  }
+
+  Widget _spinner() {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SpinKitFoldingCube(
+        color: Color(0xffff7a7a),
+        size: 80,
+      ),
+    );
+  }
+
+  Widget _content() {
     return Scaffold(
       key: scaffoldState,
       backgroundColor: Colors.white,

@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "362318598991",
-    "project_id": "digitalcash24-fa48e",
-    "storage_bucket": "digitalcash24-fa48e.appspot.com"
+    "project_number": "1064936006936",
+    "project_id": "digitalcash24",
+    "storage_bucket": "digitalcash24.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:362318598991:android:bbbde8f8e001c593a6eb3a",
+        "mobilesdk_app_id": "1:1064936006936:android:3f4007ccb25254df492a6d",
         "android_client_info": {
-          "package_name": "com.zestwallet.app"
+          "package_name": "com.digitalcash24.wallet"
         }
       },
       "oauth_client": [
         {
-          "client_id": "362318598991-qbk2hqjmmfvorn1ltbls5inod7s36ij5.apps.googleusercontent.com",
+          "client_id": "1064936006936-e1skevnf3jtduqcbkllhfiqm20nfeapa.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.zestwallet.app",
-            "certificate_hash": "d40f19bdafb205c8faf760896e93719582970485"
+            "package_name": "com.digitalcash24.wallet",
+            "certificate_hash": "980672e7a6690f1847e858c7743cbc19e4324bf9"
           }
         },
         {
-          "client_id": "362318598991-as3eshslvn63l2lo51n8088vfm3k0rvi.apps.googleusercontent.com",
+          "client_id": "1064936006936-77huvrdpdnkkvn9spt0gcafi3dap1958.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB_cSKy-N6FtCOJyLl6x2X5TlNCQn56vhI"
+          "current_key": "AIzaSyChhszHjp3R2wqfIN0cbr-H5lTd6iydXSI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "362318598991-as3eshslvn63l2lo51n8088vfm3k0rvi.apps.googleusercontent.com",
+              "client_id": "1064936006936-77huvrdpdnkkvn9spt0gcafi3dap1958.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

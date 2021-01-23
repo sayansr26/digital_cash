@@ -1,4 +1,4 @@
-package com.zestwallet.app;
+package com.digitalcash24.wallet;
 
 import io.flutter.embedding.android.FlutterActivity;
 
